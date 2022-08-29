@@ -7,16 +7,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { LoginComponent } from './pages/login/login.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 export const tokenGetter = (): string | null => localStorage.token as string;
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
