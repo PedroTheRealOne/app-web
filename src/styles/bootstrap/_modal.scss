@@ -1,0 +1,24 @@
+body.modal-open {
+  overflow: hidden !important;
+}
+
+.modal-backdrop {
+  z-index: 1030 !important;
+}
+.modal {
+  z-index: 1031 !important;
+}
+
+.modal-backdrop-confirm-z-index {
+  z-index: 1040 !important;
+}
+.modal-confirm {
+  z-index: 1041 !important;
+}
+
+.modal-backdrop-alert-z-index {
+  z-index: 1050 !important;
+}
+.modal-alert {
+  z-index: 1051 !important;
+}

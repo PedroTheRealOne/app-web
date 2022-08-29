@@ -1,0 +1,48 @@
+@import "../vars";
+
+.nav-tabs {
+  border-radius: $border-radius-pill;
+
+  &.nav-tabs-custom-border {
+    border-bottom: 0px !important;
+
+    .nav-link {
+      margin-bottom: 0px;
+      border: 0px;
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+      border-radius: $border-radius-pill;
+    }
+
+    .nav-link:not(.active) {
+      background-color: $lighter;
+    }
+
+    &.nav-subcategory {
+      flex: 0 1 auto;
+      color: $primary;
+      min-height: 42px !important;
+
+      .nav-link {
+        height: 42px !important;
+        min-height: 42px !important;
+        background-color: $white !important;
+      }
+
+      .nav-link.active {
+        color: $primary !important;
+        border: 1px solid $primary !important;
+      }
+    }
+  }
+
+  li,
+  button {
+    min-height: 56px;
+    justify-content: center;
+    align-items: center;
+  }
+}

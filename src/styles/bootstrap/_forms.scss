@@ -1,0 +1,42 @@
+@import "../vars";
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}
+
+.form-group {
+  position: relative;
+  > label {
+    color: $body-color;
+    margin-bottom: 0.25rem;
+    font-size: 12px;
+  }
+  > input,
+  ngx-intl-tel-input {
+    height: 48px;
+  }
+}
+
+.form-floating {
+  &.form-overflow-ellipsis {
+    > label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  > label,
+  ngx-intl-tel-input {
+    color: $gray-400;
+  }
+}
+
+.form-select.is-null ~ label {
+  transform: none !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  color: $muted;
+}

@@ -1,0 +1,29 @@
+@import "../vars";
+
+h1,
+h2,
+h3 {
+  font-family: $font-family;
+}
+
+.ws-pre-line {
+  white-space: pre-line;
+}
+
+.fw-medium {
+  font-weight: $font-weight-medium;
+}
+
+.fw-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+@each $typography-name, $typography-size in $typography-sizes {
+  .#{$typography-name} {
+    font-size: $typography-size;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,43 @@
+.dropdown-menu {
+  border: none;
+  padding: 0;
+
+  &.show.drop-start {
+    right: 0 !important;
+    left: unset !important;
+  }
+
+  .dropdown-item {
+    color: $body-color;
+    padding: .5rem;
+    cursor: pointer;
+
+    &:first-child {
+      border-top-left-radius: $dropdown-border-radius;
+      border-top-right-radius: $dropdown-border-radius;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: $dropdown-border-radius;
+      border-bottom-right-radius: $dropdown-border-radius;
+    }
+
+    &:hover {
+      background-color: $lighter;
+      color: $primary;
+    }
+
+    &.active, &:active {
+      background-color: $opal-10;
+      color: $primary;
+    }
+  }
+}
+
+ngb-datepicker.dropdown-menu {
+  box-shadow: 0px 4px 8px 0px #00000040 !important;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}

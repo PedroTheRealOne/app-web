@@ -1,0 +1,44 @@
+@use "sass:map";
+
+.badge {
+  @extend .fw-normal;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: $text-xs-size;
+  line-height: 1rem;
+
+  &.badge-square {
+    border-radius: $border-radius-xs;
+  }
+}
+
+$base-colors: 'kale',
+'opal',
+'emerald',
+'green-black',
+'navy',
+'lavender',
+'yellow',
+'orange',
+'red';
+
+@each $base-color in $base-colors {
+  .badge-#{$base-color} {
+    @extend .badge;
+    background-color: map.get($theme-colors, #{$base-color}-60);
+    color: $white;
+  }
+  .badge-soft-#{$base-color} {
+    @extend .badge;
+    background-color: map.get($theme-colors, #{$base-color}-10);
+    color: map.get($theme-colors, #{$base-color}-80);
+  }
+  .badge-outline-#{$base-color} {
+    @extend .badge;
+    background-color: transparent;
+    border: 1px solid map.get($theme-colors, #{$base-color}-30);
+    color: map.get($theme-colors, #{$base-color}-80);
+  }
+}

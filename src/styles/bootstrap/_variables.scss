@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+// GRAY-SCALE
+$white: #FFFFFF;
+$gray-200: #D6DAE0;
+$gray-300: #CED6E0;
+$gray-400: #BBBDC7;
+$gray-500: #747D8C;
+$gray-600: #565B73;
+$gray-700: #1F2C46;
+$gray-800: #353C4B;
+$gray-900: #212E44;
+$black: #000000;
+$lighter: #F5F5F5;
+// KALE
+$kale-10: #E0F3F5;
+$kale-20: #C1E3E8;
+$kale-30: #A1D2D8;
+$kale-40: #7CBFC7;
+$kale-50: #65ACB4;
+$kale-60: #307C84;
+$kale-70: #28656B;
+$kale-80: #205257;
+$kale-90: #173B3F;
+$kale-100 : #0E2326;
+// OPAL
+$opal-10: #EBFDFA;
+$opal-20: #DAF3EF;
+$opal-30: #C2E4DD;
+$opal-40: #B0D6CE;
+$opal-50: #92C5BA;
+$opal-60: #45796E;
+$opal-70: #33645A;
+$opal-80: #29554C;
+$opal-90: #21453F;
+$opal-100: #162F2B;
+// EMERALD
+$emerald-10: #E7FFEC;
+$emerald-20: #C6FDD2;
+$emerald-30: #94F1A9;
+$emerald-40: #6DE388;
+$emerald-50: #56C870;
+$emerald-60: #198038;
+$emerald-70: #106429;
+$emerald-80: #07481B;
+$emerald-90: #022D0D;
+$emerald-100: #0D1E11;
+// GREEN-BLACK
+$green-black-10: #E7E9EA;
+$green-black-20: #D0D3D4;
+$green-black-30: #B8BCBF;
+$green-black-40: #A1A6A9;
+$green-black-50: #899094;
+$green-black-60: #717A7E;
+$green-black-70: #5A6469;
+$green-black-80: #424D53;
+$green-black-90: #2B373D;
+$green-black-100: #132128;
+// NAVY
+$navy-10: #EBECFE;
+$navy-20: #D8DAFC;
+$navy-30: #B1B5F9;
+$navy-40: #898FF7;
+$navy-50: #626AF4;
+$navy-60: #3B45F1;
+$navy-70: #2F37C1;
+$navy-80: #232991;
+$navy-90: #181C60;
+$navy-100: #121548;
+// LAVENDER
+$lavender-10: #F5F0FF;
+$lavender-20: #EBE0FF;
+$lavender-30: #D4BBFF;
+$lavender-40: #BE95FF;
+$lavender-50: #A56EFF;
+$lavender-60: #8A3FFC;
+$lavender-70: #6929C4;
+$lavender-80: #491D8B;
+$lavender-90: #31135E;
+$lavender-100: #1C0F30;
+// YELLOW
+$yellow-10: #FCF4D6;
+$yellow-20: #FDDC69;
+$yellow-30: #F1C21B;
+$yellow-40: #D2A106;
+$yellow-50: #B28600;
+$yellow-60: #8E6A00;
+$yellow-70: #684E00;
+$yellow-80: #483700;
+$yellow-90: #302400;
+$yellow-100: #1C1500;
+// ORANGE
+$orange-10: #FFF2E8;
+$orange-20: #FFD9BE;
+$orange-30: #FFB784;
+$orange-40: #FF832B;
+$orange-50: #EB6200;
+$orange-60: #BA4E00;
+$orange-70: #8A3800;
+$orange-80: #5E2900;
+$orange-90: #3E1A00;
+$orange-100: #231000;
+// RED
+$red-10: #FFF1F1;
+$red-20: #FFD7D9;
+$red-30: #FFB3B8;
+$red-40: #FF8389;
+$red-50: #FA4D56;
+$red-60: #DA1E28;
+$red-70: #A2191F;
+$red-80: #750E13;
+$red-90: #520408;
+$red-100: #2D0709;
+
+// SYSTEM COLORS
+$primary: $kale-90;
+$success: $emerald-60;
+$danger: $red-60;
+$warning: $yellow-40;
+$borders: $opal-40;
+$body-color: $green-black-100;
+$muted: $green-black-50;
+$andela-gradient: linear-gradient(99.11deg, $opal-60 -0.6%, $opal-70 102.09%);
+
+$theme-colors: ('white': $white,
+  'gray-200': $gray-200,
+  'gray-300': $gray-300,
+  'gray-400': $gray-400,
+  'gray-500': $gray-500,
+  'gray-600': $gray-600,
+  'gray-700': $gray-700,
+  'gray-800': $gray-800,
+  'gray-900': $gray-900,
+  'black': $black,
+  'kale-10': $kale-10,
+  'kale-20': $kale-20,
+  'kale-30': $kale-30,
+  'kale-40': $kale-40,
+  'kale-50': $kale-50,
+  'kale-60': $kale-60,
+  'kale-70': $kale-70,
+  'kale-80': $kale-80,
+  'kale-90': $kale-90,
+  'kale-100': $kale-100,
+  'opal-10': $opal-10,
+  'opal-20': $opal-20,
+  'opal-30': $opal-30,
+  'opal-40': $opal-40,
+  'opal-50': $opal-50,
+  'opal-60': $opal-60,
+  'opal-70': $opal-70,
+  'opal-80': $opal-80,
+  'opal-90': $opal-90,
+  'opal-100': $opal-100,
+  'emerald-10': $emerald-10,
+  'emerald-20': $emerald-20,
+  'emerald-30': $emerald-30,
+  'emerald-40': $emerald-40,
+  'emerald-50': $emerald-50,
+  'emerald-60': $emerald-60,
+  'emerald-70': $emerald-70,
+  'emerald-80': $emerald-80,
+  'emerald-90': $emerald-90,
+  'emerald-100': $emerald-100,
+  'green-black-10': $green-black-10,
+  'green-black-20': $green-black-20,
+  'green-black-30': $green-black-30,
+  'green-black-40': $green-black-40,
+  'green-black-50': $green-black-50,
+  'green-black-60': $green-black-60,
+  'green-black-70': $green-black-70,
+  'green-black-80': $green-black-80,
+  'green-black-90': $green-black-90,
+  'green-black-100': $green-black-100,
+  'navy-10': $navy-10,
+  'navy-20': $navy-20,
+  'navy-30': $navy-30,
+  'navy-40': $navy-40,
+  'navy-50': $navy-50,
+  'navy-60': $navy-60,
+  'navy-70': $navy-70,
+  'navy-80': $navy-80,
+  'navy-90': $navy-90,
+  'navy-100': $navy-100,
+  'lavender-10': $lavender-10,
+  'lavender-20': $lavender-20,
+  'lavender-30': $lavender-30,
+  'lavender-40': $lavender-40,
+  'lavender-50': $lavender-50,
+  'lavender-60': $lavender-60,
+  'lavender-70': $lavender-70,
+  'lavender-80': $lavender-80,
+  'lavender-90': $lavender-90,
+  'lavender-100': $lavender-100,
+  'yellow-10': $yellow-10,
+  'yellow-20': $yellow-20,
+  'yellow-30': $yellow-30,
+  'yellow-40': $yellow-40,
+  'yellow-50': $yellow-50,
+  'yellow-60': $yellow-60,
+  'yellow-70': $yellow-70,
+  'yellow-80': $yellow-80,
+  'yellow-90': $yellow-90,
+  'yellow-100': $yellow-100,
+  'orange-10': $orange-10,
+  'orange-20': $orange-20,
+  'orange-30': $orange-30,
+  'orange-40': $orange-40,
+  'orange-50': $orange-50,
+  'orange-60': $orange-60,
+  'orange-70': $orange-70,
+  'orange-80': $orange-80,
+  'orange-90': $orange-90,
+  'orange-100': $orange-100,
+  'red-10': $red-10,
+  'red-20': $red-20,
+  'red-30': $red-30,
+  'red-40': $red-40,
+  'red-50': $red-50,
+  'red-60': $red-60,
+  'red-70': $red-70,
+  'red-80': $red-80,
+  'red-90': $red-90,
+  'red-100': $red-100,
+  'danger': $danger,
+  'warning': $warning,
+  'primary': $primary,
+  'success': $success,
+  'lighter': $lighter,
+  'borders': $borders,
+  'body-color': $body-color,
+  'muted': $muted,
+);
+
+$theme-colors: map-merge(('white': $white,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+    'borders': $borders,
+    'black': $black,
+  ),
+  $theme-colors);
+
+$spacer: 1rem;
+$spacers: (0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
+// Misc
+$min-contrast-ratio: 1.8;
+$client-header-height: 5rem;
+$client-router-outlet-container-margin-top: 1.5rem;
+$client-router-outlet-container-margin-bottom: 1.5rem;
+$client-container-padding-y: calc($client-router-outlet-container-margin-top + $client-router-outlet-container-margin-bottom);
+
+// Font family
+$font-family: 'Inria Serif',
+serif;
+$font-family-sans-serif: 'Inter',
+system-ui,
+-apple-system,
+'Segoe UI',
+Roboto,
+'Helvetica Neue',
+Arial,
+'Noto Sans',
+'Liberation Sans',
+sans-serif,
+'Apple Color Emoji',
+'Segoe UI Emoji',
+'Segoe UI Symbol',
+'Noto Color Emoji';
+
+$material-icons-font-family: normal normal normal 24px/1 'Material Design Icons';
+
+// Font weight
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$headings-font-weight: $font-weight-semi-bold;
+
+// Font size
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 3.25;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 2;
+$h4-font-size: $font-size-base * 1.5;
+$text-xl: $font-size-base * 1.375;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base * 1.125;
+$text-sm: $font-size-base * 0.875;
+$text-xs-size: 0.75em !default;
+$text-xxs-size: $font-size-base * 0.625 !default;
+
+$typography-sizes: ('text-h1-size': $h1-font-size,
+  'text-h2-size': $h2-font-size,
+  'text-h3-size': $h3-font-size,
+  'text-xxl': $h4-font-size,
+  'text-xl': $text-xl,
+  'text-lg': $h5-font-size,
+  'text-base': $h6-font-size,
+  'text-sm': $text-sm,
+  'text-xs': $text-xs-size,
+  'text-xxs': $text-xxs-size,
+);
+
+// Border radius
+$border-radius-xs: .25rem;
+$border-radius-sm: .375rem;
+$border-radius: .5rem;
+$border-radius-lg: 1rem;
+$border-radius-pill: 50rem;
+$dropdown-border-radius: $border-radius-sm;
+
+// Buttons
+$btn-font-weight: $font-weight-semi-bold !default;
+$btn-padding-y: 0;
+$btn-height: 3rem;
+
+$input-btn-padding-y: 0.688rem;
+$input-btn-padding-x: 1rem;
+
+// Input
+$input-disabled-bg: $opal-10;
+$input-color: $body-color;
+$input-placeholder-color: $muted;
+$input-border-radius: $border-radius-sm !default;
+
+// Form
+$form-floating-padding-y: 0.688rem;
+$form-floating-height: 3rem;
+$form-floating-input-padding-t: 1rem;
+$form-floating-input-padding-b: 0rem;
+$form-floating-label-opacity: 1;
+$form-check-input-checked-bg-color: $emerald-60;
+$form-check-input-border-radius: 0.25em;
+
+// Modal
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+
+// Table
+$table-border-color: $gray-200;
+$table-group-separator-color: $gray-300;
+$table-hover-bg: $opal-10;
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+
+// Badge
+$badge-border-radius: 50rem;
+
+// Spinner
+$spinner-width-sm: 1.5rem;
+$spinner-height-sm: 1.5rem;
+$spinner-border-width-sm: 0.1em;
+
+// Breadcrumb
+$breadcrumb-margin-bottom: 0px;
+
+// Nav
+$navbar-height: 5rem;
+$nav-link-color: $body-color;
+$nav-tabs-border-radius: 50rem;
+$nav-tabs-link-active-color: $white;
+$nav-tabs-link-active-bg: $primary !important;
+$nav-link-hover-color: $primary;
+
+// Alert
+$alert-border-radius: $border-radius-sm;
+$alert-padding-y: 0.5rem;
+$alert-padding-x: 0.5rem;
+$alert-margin-bottom: 0 !important;
+$alert-border-width: 0 !important;
+
+// Accordion
+$accordion-bg: $lighter;
+$accordion-border-color: $green-black-20;
+$accordion-border-radius: $border-radius-sm;
+$accordion-inner-border-radius: $border-radius-sm;
+
+$accordion-padding-y: 1rem;
+$accordion-padding-x: 1rem;
+$accordion-body-padding-y: 1rem;
+$accordion-body-padding-x: 1rem;
+$accordion-button-padding-y: 0.75rem;
+$accordion-button-padding-x: 0.75rem;
+
+$accordion-button-color: $body-color;
+$accordion-button-bg: $white;
+
+$accordion-button-active-bg: $white;
+$accordion-button-active-color: $body-color;
+
+$accordion-button-focus-border-color: unset !important;
+$accordion-button-focus-box-shadow: unset !important;

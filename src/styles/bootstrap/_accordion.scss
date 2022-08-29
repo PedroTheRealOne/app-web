@@ -1,0 +1,55 @@
+@import "../vars";
+
+.accordion-body {
+  border: 1px solid $accordion-border-color !important;
+  border-top-width: 0px !important;
+  background-color: $lighter;
+
+  border-bottom-left-radius: $accordion-border-radius;
+  border-bottom-right-radius: $accordion-border-radius;
+
+  &.accordion-with-footer {
+    border-radius: 0px;
+  }
+}
+
+.accordion-footer {
+  @extend .p-3;
+  border: 1px solid $accordion-border-color !important;
+  background-color: $white;
+  border-top-width: 0px !important;
+  border-bottom-left-radius: $accordion-border-radius;
+  border-bottom-right-radius: $accordion-border-radius;
+}
+
+.accordion-item {
+  border-width: 0px;
+  background: transparent !important;
+}
+
+.accordion-button {
+  box-shadow: unset !important;
+  font-weight: $font-weight-semi-bold;
+  font-family: $font-family-sans-serif;
+  border: 1px solid $accordion-border-color !important;
+  border-radius: $accordion-border-radius !important;
+  transition: border-radius 1s;
+
+  &:focus {
+    border: 1px solid $accordion-border-color !important;
+  }
+
+  .collapsed-title {
+    opacity: 1;
+  }
+
+  &:not(.collapsed) {
+    .collapsed-title {
+      opacity: 0;
+    }
+
+    transition: border-radius 0s;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+}

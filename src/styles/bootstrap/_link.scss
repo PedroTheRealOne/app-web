@@ -1,0 +1,11 @@
+@import "../vars";
+
+a.link-style {
+  color: $emerald-60 !important;
+  text-decoration: none !important;
+  font-weight: $font-weight-normal !important;
+
+  &:hover {
+    color: $emerald-70 !important;
+  }
+}

@@ -1,0 +1,24 @@
+@import "bootstrap/index";
+
+ngb-datepicker {
+  background-color: $white !important;
+  z-index: 100000;
+}
+
+.ngb-dp-weekday.small {
+  color: $green-black-100;
+}
+
+.ngb-dp-day.disabled {
+  opacity: 0.5;
+}
+
+.btn-outline-with-white-bg {
+  &:not(:hover) {
+    background-color: $white;
+  }
+}
+
+.mt-n1 {
+  margin-top: -0.25rem;
+}
