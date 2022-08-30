@@ -24,13 +24,13 @@
                 </div>
             </form>
 
-            <a class="btn btn-primary mb-4 me-4" (click)="signup()">Sign up</a>
-            <a class="btn btn-outline-primary mb-4" (click)="login()">Log in</a>
+            <a class="btn btn-primary mb-4 me-4" (click)="signup()">Criar conta</a>
+            <a class="btn btn-outline-primary mb-4" (click)="login()">Entrar</a>
         </div>
 
     </div>
 </div>
 
 <div class="modal modal-alert fade" id="modalTest">
-    <app-signup-component></app-signup-component>
+    <app-signup-component [modalContext]="modal"></app-signup-component>
 </div>
