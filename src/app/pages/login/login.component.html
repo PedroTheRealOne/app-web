@@ -1,5 +1,4 @@
 <div class="container">
-
     <div class="content">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="small-bird">
             <g>
@@ -14,7 +13,6 @@
         <h3>Entre no twitter.</h3>
 
         <div>
-
             <form [formGroup]="form">
                 <div class="form-outline mb-4">
                     <label for="email" class="form-label">Email</label>
@@ -22,14 +20,16 @@
                 </div>
                 <div class="form-outline mb-4">
                     <label for="password" class="form-label">Senha</label>
-                    <input type="password" id="password" formControlName="password"
-                        class="form-control" />
+                    <input type="password" id="password" formControlName="password" class="form-control" />
                 </div>
             </form>
-
-            <a href="#" class="btn btn-signup">Sign up</a>
-            <a href="#" class="btn btn-login">Log in</a>
+            <a class="btn btn-signup" (click)="signup()">Sign up</a>
+            <a class="btn btn-login" (click)="login()">Log in</a>
         </div>
 
     </div>
+</div>
+
+<div class="modal modal-alert fade" id="modalTest">
+    <app-signup-component></app-signup-component>
 </div>

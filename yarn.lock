@@ -1240,6 +1240,11 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@popperjs/core@^2.9.2":
+  version "2.11.6"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
+  integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
+
 "@schematics/angular@11.0.7":
   version "11.0.7"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.0.7.tgz#bb992d25d5291fd31f048cbb295c3a7bbde6a4e1"
@@ -1262,6 +1267,13 @@
     pacote "9.5.12"
     semver "7.3.2"
     semver-intersect "1.4.0"
+
+"@types/bootstrap@^5.2.1":
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/@types/bootstrap/-/bootstrap-5.2.3.tgz#562defe61dac6c9598843d4088de8007a36607bd"
+  integrity sha512-r2SE9NYaaI7B/jJk8gqRtXzlhgFL6dlXBResJkCbQa8ept619WeiOIO4zBQxdmUFzkKNWLK5ZOyYGI3QZoaqbQ==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
 
 "@types/glob@^7.1.1":
   version "7.2.0"

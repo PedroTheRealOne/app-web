@@ -7,7 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { LayoutComponent } from './pages/layout/layout.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+
+import { SignupComponent } from './components/signup/signup.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -16,7 +20,10 @@ export const tokenGetter = (): string | null => localStorage.token as string;
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    HomeComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,7 @@ export const tokenGetter = (): string | null => localStorage.token as string;
       config: {
         tokenGetter: tokenGetter,
       }
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
