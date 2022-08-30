@@ -70,22 +70,6 @@ h3 {
   font-weight: 700;
 }
 
-.btn-signup {
-  background: #1da1f2;
-  color: #fff;
-  transition: all .2s ease;
-  margin-right: 8px;
-}
-
-.btn-signup:hover {
-  background: #1f94dd;
-}
-
-.btn-login {
-  border: 1px solid #1da1f2;
-  // color: #1da1f2;
-}
-
 @media(max-width: 1050px) {
   .content {
     order: -1;

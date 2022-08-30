@@ -10,21 +10,22 @@
         </svg>
 
         <h1>Acontecendo agora</h1>
-        <h3>Entre no twitter.</h3>
+        <h3>Entre no twitter (clone).</h3>
 
         <div>
             <form [formGroup]="form">
                 <div class="form-outline mb-4">
                     <label for="email" class="form-label">Email</label>
-                    <input type="text" id="email" formControlName="email" class="form-control" />
+                    <input type="text" id="email" formControlName="email" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline mb-4">
                     <label for="password" class="form-label">Senha</label>
-                    <input type="password" id="password" formControlName="password" class="form-control" />
+                    <input type="password" id="password" formControlName="password" class="form-control form-control-lg" />
                 </div>
             </form>
-            <a class="btn btn-signup" (click)="signup()">Sign up</a>
-            <a class="btn btn-login" (click)="login()">Log in</a>
+
+            <a class="btn btn-primary mb-4 me-4" (click)="signup()">Sign up</a>
+            <a class="btn btn-outline-primary mb-4" (click)="login()">Log in</a>
         </div>
 
     </div>
