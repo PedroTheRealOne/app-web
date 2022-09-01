@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { SignupComponent } from './components/signup/signup.component';
+import { SpinnerLoadingComponent } from './components/spinner-loading/spinner-loading.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -24,6 +25,7 @@ export const tokenGetter = (): string | null => localStorage.token as string;
     SignupComponent,
     HomeComponent,
     LayoutComponent,
+    SpinnerLoadingComponent,
   ],
   imports: [
     BrowserModule,

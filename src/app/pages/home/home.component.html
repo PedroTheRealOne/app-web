@@ -4,14 +4,19 @@
         <i class="bi bi-stars"></i>
     </div>
     <div class="col-md-12 mb-2">
-        <form>
-            <label for="exampleFormControlTextarea1">O que tá pegando?</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <form [formGroup]="tweetForm">
+            <label for="content">O que tá pegando?</label>
+            <textarea class="form-control" id="content" rows="3" formControlName="content" (ngModelChange)="tweetContentChange()"></textarea>
         </form>
     </div>
     <div class="d-flex flex-row-reverse">
-        <button class="btn-sm btn-primary">Tweet</button>
+        <button class="btn btn-primary" type="button" [ngClass]="{'disabled': tweetLoading || !tweetIsValid}" (click)="tweet()">
+            <span *ngIf="tweetLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="mx-4">Tweet</span>
+          </button>
     </div>
 </div>
 
 <hr class="mt-12" />
+
+<app-spinner-loading></app-spinner-loading>
