@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
         password: new FormControl('', [Validators.required])
     });
 
+    public loginLoading: boolean = false;
+
     public signup(): void {
         this.modal.show();
         // document.querySelector('.modal-backdrop:last-child').classList.add('modal-backdrop-alert-z-index');
@@ -27,7 +29,9 @@ export class LoginComponent implements OnInit {
 
     public login(): void {
         if (this.form.valid) {
-            
+
+            this.loginLoading = true;
+
             const data = {
                 email: this.form.value.email,
                 password: this.form.value.password
@@ -35,8 +39,10 @@ export class LoginComponent implements OnInit {
 
             this.api.post<any>('sessions', data).then((res) => {
                 this.authService.token = res.token
+                this.loginLoading = false;
                 this.router.navigate([''])
             }).catch((err) => {
+                this.loginLoading = false;
                 alert(err.error)
             })
         }

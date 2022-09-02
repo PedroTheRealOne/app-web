@@ -6,17 +6,26 @@
     <div class="col-md-12 mb-2">
         <form [formGroup]="tweetForm">
             <label for="content">O que tá pegando?</label>
-            <textarea class="form-control" id="content" rows="3" formControlName="content" (ngModelChange)="tweetContentChange()"></textarea>
+            <textarea class="form-control" id="content" rows="3" formControlName="content"
+                (ngModelChange)="tweetContentChange()"></textarea>
         </form>
     </div>
     <div class="d-flex flex-row-reverse">
-        <button class="btn btn-primary" type="button" [ngClass]="{'disabled': tweetLoading || !tweetIsValid}" (click)="tweet()">
+        <button class="btn btn-primary" type="button" [ngClass]="{'disabled': tweetLoading || !tweetIsValid}"
+            (click)="tweet()">
             <span *ngIf="tweetLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             <span class="mx-4">Tweet</span>
-          </button>
+        </button>
     </div>
 </div>
 
 <hr class="mt-12" />
-
-<app-spinner-loading></app-spinner-loading>
+<div *ngIf="feedLoading">
+    <app-spinner-loading></app-spinner-loading>
+</div>
+<div *ngIf="!feedLoading">
+    <div *ngFor="let tweet of tweetFeed">
+        <app-tweet [tweet]="tweet"></app-tweet>
+    </div>
+</div>
+<!-- <pre *ngIf="!feedLoading"> {{tweetFeed | json}} </pre> -->

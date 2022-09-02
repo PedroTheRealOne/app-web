@@ -20,12 +20,17 @@
                 </div>
                 <div class="mb-3">
                     <label for="passwordConfirmation" class="col-form-label">Password</label>
-                    <input type="password" class="form-control" formControlName="passwordConfirmation" id="passwordConfirmation">
+                    <input type="password" class="form-control" formControlName="passwordConfirmation"
+                        id="passwordConfirmation">
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cadastrar</button>
+            <!-- data-bs-dismiss="modal" -->
+            <button type="button" class="btn btn-primary" (click)="signup()"> 
+                <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span class="mx-4">Cadastrar</span>
+            </button>
         </div>
     </div>
 </div>

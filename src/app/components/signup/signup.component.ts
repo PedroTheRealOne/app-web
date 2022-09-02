@@ -9,10 +9,12 @@ import { ApiService } from "src/app/services/api-service";
     templateUrl: "./signup.component.html",
 })
 
-export class SignupComponent implements OnInit{
+export class SignupComponent{
     constructor(private api: ApiService, private router: Router) { }
 
     @Input() modalContext!: Modal;
+
+    public loading: boolean = false;
 
     public form: FormGroup = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
@@ -23,23 +25,23 @@ export class SignupComponent implements OnInit{
 
 
     public signup(): void {
-        if(this.form.valid) {
+        if (this.form.valid) {
+            this.loading = true;
+
             const data = {
                 email: this.form.value.email,
-                user_name: `@${this.form.value.userName}`,
+                user_name: this.form.value.userName,
                 password: this.form.value.password,
                 password_confirmation: this.form.value.passwordConfirmation
             }
 
             this.api.post<any>('users', data).then((res) => {
-                // this.modalContext.hide();
+                this.loading = false;
+                this.modalContext.hide();
             }).catch((err) => {
+                this.loading = false;
                 alert(err.error)
             })
         }
-    }
-
-    ngOnInit() {
-
     }
 }

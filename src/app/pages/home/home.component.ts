@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Form, FormControl, FormGroup, Validators } from "@angular/forms";
+import { TweetModel } from "src/app/models/tweet.model";
 import { ApiService } from "src/app/services/api-service";
 
 @Component({
@@ -8,16 +9,25 @@ import { ApiService } from "src/app/services/api-service";
     styleUrls: ["./home.component.scss"]
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
     constructor(private api: ApiService) { }
 
     public tweetForm: FormGroup = new FormGroup({
         content: new FormControl('')
     })
 
+    public tweetFeed: TweetModel[] = [];
+
+    public feedLoading: boolean = true;
+
     public tweetLoading: boolean = false;
 
     public tweetIsValid: boolean = false;
+
+
+    ngOnInit(): void {
+        this.fetchFeed();
+    }
 
     public tweetContentChange(): void{
         if(this.tweetForm.value.content){
@@ -40,5 +50,16 @@ export class HomeComponent {
                 alert(err.error)
             })
         }
+    }
+
+    public fetchFeed(): void {
+        this.feedLoading = true;
+        this.api.get<TweetModel[]>('feed').then((res) => {
+            this.tweetFeed = res;
+            this.feedLoading = false;
+        }).catch((err) => {
+            this.feedLoading = false;
+            alert(err.error)
+        })
     }
 }
