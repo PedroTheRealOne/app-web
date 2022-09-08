@@ -6,4 +6,5 @@ export interface TweetModel {
     posted_at: string;
     user: UserTweetModel;
     likes: number;
+    liked: boolean;
 }

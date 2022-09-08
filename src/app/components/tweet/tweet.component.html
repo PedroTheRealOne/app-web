@@ -21,9 +21,9 @@
                 <i class="bi bi-chat"></i>
                 <i class="bi bi-repeat"></i>
                 <div (click)="likeTweet()">
-                    <i *ngIf="!likedTweet" class="bi bi-heart"></i>
-                    <i *ngIf="likedTweet" class="bi bi-heart-fill"></i>
-                    <a class="tweet-likes mx-4">{{tweet.likes}}</a>
+                    <i *ngIf="!tweet.liked" class="bi bi-heart"></i>
+                    <i *ngIf="tweet.liked" class="bi bi-heart-fill"></i>
+                    <a class="tweet-likes">{{tweet.likes}}</a>
                 </div>
             </div>
         </div>

@@ -12,10 +12,15 @@ export class TweetComponent {
     constructor(private api: ApiService) { }
 
     @Input() tweet!: TweetModel;
-    @Input() likedTweet: boolean = false;
-    @Output() likeTweetEvent = new EventEmitter<number>();
 
     public likeTweet(): void {
-        this.likeTweetEvent.emit(this.tweet.id);
+        this.tweet.liked = !this.tweet.liked;
+
+        if (this.tweet.liked) {
+            this.tweet.likes++;
+            this.api.post('likes', { post_id: this.tweet.id }).catch((err) => { })
+        } else {
+            this.tweet.likes--;
+        }
     }
 }

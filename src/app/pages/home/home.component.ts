@@ -17,8 +17,6 @@ export class HomeComponent implements OnInit {
         content: new FormControl('')
     })
 
-    public likedTweets: LikeModel[] = [];
-
     public tweetFeed: TweetModel[] = [];
 
     public feedLoading: boolean = true;
@@ -29,7 +27,6 @@ export class HomeComponent implements OnInit {
 
 
     ngOnInit(): void {
-        this.fetchLikedTweets();
         this.fetchFeed();
     }
 
@@ -67,33 +64,24 @@ export class HomeComponent implements OnInit {
         })
     }
 
-    public fetchLikedTweets(): void {
-        this.api.get<LikeModel[]>('likes').then((res) => {
-            this.likedTweets = res;
-        }).catch((err) => { })
-    }
 
-    public checkLikedTweet(tweetId: number): boolean {
-        if (this.likedTweets.find((like) => like.post_id === tweetId)) {
-            console.log("true")
-            return true;
-        } else {
-            console.log("false")
-            return false;
-        }
-    }
+    // public checkLikedTweet(tweetId: number): boolean {
+    //     return this.likedTweets.find((like) => like.post_id === tweetId) ? true : false;
+    // }
 
-    public addLikeTweetToLikedTweets(tweetId: number): void {
-        const data = {
-            post_id: tweetId
-        }
+    // public addLikeTweetToLikedTweets(tweetId: number): void {
+    //     const data = { post_id: tweetId }
 
-        this.likedTweets.push({
-            post_id: tweetId
-        })
+    //     this.likedTweets.push(data)
 
-        this.api.post('likes', data).catch((err) => {
-            alert(err.error)
-        })
-    }
+    //     let tempTweet = this.tweetFeed.find((tweet) => tweet.id === tweetId);
+
+    //     if (tempTweet) {
+    //         tempTweet.likes += 1;
+    //     }
+
+    //     this.api.post('likes', data).catch((err) => {
+    //         alert(err.error)
+    //     })
+    // }
 }
