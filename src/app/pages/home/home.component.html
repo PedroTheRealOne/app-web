@@ -25,7 +25,7 @@
 </div>
 <div *ngIf="!feedLoading">
     <div *ngFor="let tweet of tweetFeed">
-        <app-tweet [tweet]="tweet"></app-tweet>
+        <app-tweet [tweet]="tweet" [likedTweet]="checkLikedTweet(tweet.id)" (likeTweetEvent)="addLikeTweetToLikedTweets($event)"></app-tweet>
     </div>
 </div>
 <!-- <pre *ngIf="!feedLoading"> {{tweetFeed | json}} </pre> -->

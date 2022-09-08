@@ -1,5 +1,6 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { TweetModel } from "src/app/models/tweet.model";
+import { ApiService } from "src/app/services/api-service";
 
 @Component({
     selector: "app-tweet",
@@ -8,7 +9,13 @@ import { TweetModel } from "src/app/models/tweet.model";
 })
 
 export class TweetComponent {
-    constructor() { }
+    constructor(private api: ApiService) { }
 
     @Input() tweet!: TweetModel;
+    @Input() likedTweet: boolean = false;
+    @Output() likeTweetEvent = new EventEmitter<number>();
+
+    public likeTweet(): void {
+        this.likeTweetEvent.emit(this.tweet.id);
+    }
 }

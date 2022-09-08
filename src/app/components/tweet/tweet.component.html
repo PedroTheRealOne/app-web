@@ -3,7 +3,7 @@
         <div class="col">
             <img class="rounded-circle" src="assets/placeholder-usuario-500x500.jpg" width="50" height="50" />
         </div>
-        <div class="d-flex flex-column mx-2">
+        <div class="d-flex flex-column mx-3">
             <div class="d-flex tweet-info">
                 <div class="d-flex flex-column">
                     <a class="user-name">@{{tweet.user.user_name}} </a>
@@ -12,9 +12,18 @@
                     <a class="posted-at mx-4">{{tweet.posted_at | date: 'd/M/y h:mm a'}}</a>
                 </div>
             </div>
-            <div class="d-flex">
+            <div class="d-flex tweet-info">
                 <div class="col">
                     <p>{{tweet.content}}</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-repeat"></i>
+                <div (click)="likeTweet()">
+                    <i *ngIf="!likedTweet" class="bi bi-heart"></i>
+                    <i *ngIf="likedTweet" class="bi bi-heart-fill"></i>
+                    <a class="tweet-likes mx-4">{{tweet.likes}}</a>
                 </div>
             </div>
         </div>
